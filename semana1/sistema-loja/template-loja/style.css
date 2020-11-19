@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+
+body{
+background: #41295a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Raleway', sans-serif;
+margin: 0;
+padding: 0;
+}
+
+.cabecalho{
+    background-color: #4a1b68;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+a:hover { 
+    background-color: purple;
+}
+
+h1, a{
+    color: lightgray;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.fotoinicial{
+    margin: 50vh;
+    margin-top: 100px;
+}
+
+.apresentacao{
+    text-align: center;
+    color: lightgray;
+    font-size: 15px;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.footer{
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.tabela{
+    margin-bottom: 50px;
+    margin: 0 auto;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td{
+    text-align-last: center;
+    text-align: center;
+}
+
+
+td > img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form{
+    color: white;
+    margin: 50vh;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+button{
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+input{
+    background-color: rgb(236, 228, 228);
+    width: 300px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.lista{
+    font-size: 20px;
+    margin: 50vh;
+    color: white;
+    font-size: 20px;
+    margin-top: 100px;
+}
