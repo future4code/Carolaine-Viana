@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anton&family=Caveat&family=Fjalla+One&family=Manrope:wght@200&family=Mulish:wght@200&family=Poiret+One&family=Poppins&family=Rajdhani:wght@300&family=Unica+One&display=swap');
+
+body{
+background-color: white;
+font-family: 'Mulish', sans-serif;
+}
+
+.titulo-inicial{
+    color: #e77706;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.sub-titulo{
+    color: black;
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #f8f7f4;
+}
+
+h2{
+    color: #e77706;
+}
+
+h3{
+    color: #e77706;
+}
+
+
+.perfil{
+    background-color: #f8f7f4;
+    width: 50%;
+    font-size: 20px;
+}
+
+.dados-pessoais{
+    background-color: #f8f7f4;
+    width: 50%;
+    padding: 5px;
+    color: black;
+    font-size: 20px;
+}
+
+
+.box2{
+    display: flex;
+    flex-direction: row;
+}
+
+.box3{
+    display: flex;
+    flex-direction: row;
+}
+
+.habilidades{
+    width: 50%;
+}
+
+.experiencia-prof{
+    width: 50%;
+}
+
+
+.formulario{
+    width: 50%;
+}
+
+.redes-sociais{
+    background-color: #f8f7f4;
+    padding: 20px;
+}
+
+/* pagina 2 */
+
+.galeria{
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto1{
+    width: 50%;
+}
+
+.projeto2{
+    width: 50%;
+}
+
+.titulo-pagina-galeria{
+    color: #e77706;
+    font-family: 'Caveat', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+
+/* .projetos{
+    color: #e77706;
+    font-weight: bold;
+}
+
+
+.projeto-loja, .projeto-labenu{
+    object-fit: cover;
+}
+
+.titulo-pagina-galeria{
+    color: #e77706;
+    font-family: 'Caveat', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.texto-galeria{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+
+.titulo-projeto{
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+} */
+
+
