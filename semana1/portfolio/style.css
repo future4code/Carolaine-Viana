@@ -1,131 +1,208 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anton&family=Caveat&family=Fjalla+One&family=Manrope:wght@200&family=Mulish:wght@200&family=Poiret+One&family=Poppins&family=Rajdhani:wght@300&family=Unica+One&display=swap');
-
-body{
-background-color: white;
-font-family: 'Mulish', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin:wght@500&family=Caveat&family=Comfortaa:wght@700&family=Francois+One&family=Goldman&family=Lato:wght@900&family=Noto+Sans+JP&family=Orbitron&family=Raleway:wght@100&display=swap');
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+    background-image: url(./img/5.jpg);
+    background-repeat: repeat;
+    font-family: 'Cabin', sans-serif;
 }
 
-.titulo-inicial{
-    color: #e77706;
+.menu {
+    background-color: white;
+    height: 50px;
     text-align: center;
-    margin-top: 100px;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
 }
 
-.sub-titulo{
+.menu>span:hover {
+    margin-left: 40px;
+    background-color: lightgray;
+}
+
+a,
+span {
+    text-decoration: none;
     color: black;
-    text-align: center;
-    font-family: 'Mulish', sans-serif;
 }
 
-.box{
+.apre {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: greenyellow;
+}
+
+.perfil {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.black-box>span {
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+.box1 {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    background-color: #f8f7f4;
+    border: 1px solid rgba(172, 165, 165, 0.767);
 }
 
-h2{
-    color: #e77706;
-}
-
-h3{
-    color: #e77706;
-}
-
-
-.perfil{
-    background-color: #f8f7f4;
+.perfil {
     width: 50%;
+    padding: 10px;
+    color: greenyellow;
+}
+
+.perfil>h2 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.dados-pessoais {
+    width: 50%;
+    text-align: center;
+    color: greenyellow;
+}
+
+.dados-pessoais>h2 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.dados-pessoais>p {
+    color: white;
     font-size: 20px;
 }
 
-.dados-pessoais{
-    background-color: #f8f7f4;
-    width: 50%;
-    padding: 5px;
-    color: black;
-    font-size: 20px;
+.dados-pessoais>.black-box {
+    background-color: black;
 }
 
+h2 {
+    text-align: center;
+}
 
-.box2{
+.box2 {
     display: flex;
     flex-direction: row;
 }
 
-.box3{
-    display: flex;
-    flex-direction: row;
-}
-
-.habilidades{
+.experiencia {
     width: 50%;
-}
-
-.experiencia-prof{
-    width: 50%;
-}
-
-
-.formulario{
-    width: 50%;
-}
-
-.redes-sociais{
-    background-color: #f8f7f4;
+    background-color: black;
+    color: greenyellow;
+    font-family: 'Noto Sans JP', sans-serif;
+    border: 1px solid grey;
     padding: 20px;
 }
 
-/* pagina 2 */
+.experiencia>h2 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
 
-.galeria{
+.experiencia>h3 {
+    color: greenyellow;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+p {
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    font-size: 20px;
+}
+
+.habilidades {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-left: 300px;
+    font-size: 20px;
+}
+
+.habilidades .black-box {
+    background-color: black;
+}
+
+.hab-titulo {
+    color: greenyellow;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.redes-sociais {
+    color: greenyellow;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    list-style: none;
+}
+
+
+/* pagina 2 = galeria de projetos */
+
+.box3 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.projeto1{
-    width: 50%;
-}
-
-.projeto2{
-    width: 50%;
-}
-
-.titulo-pagina-galeria{
-    color: #e77706;
-    font-family: 'Caveat', cursive;
-    font-size: 50px;
+.galeria-titulo {
     text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: yellowgreen;
 }
 
-
-/* .projetos{
-    color: #e77706;
-    font-weight: bold;
+img {
+    border: 1px solid greenyellow;
+    padding: 10px;
+    background-color: white;
 }
 
-
-.projeto-loja, .projeto-labenu{
+.proj {
+    width: 50%;
     object-fit: cover;
+    color: yellowgreen;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
 }
 
-.titulo-pagina-galeria{
-    color: #e77706;
-    font-family: 'Caveat', cursive;
-    font-size: 50px;
+.proj>h2,
+h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: yellowgreen;
+}
+
+
+/* pagina 3 = formulario para contato */
+
+.titulo-form {
+    font-family: 'Orbitron', sans-serif;
+    color: yellowgreen;
     text-align: center;
 }
 
-.texto-galeria{
-    font-family: Arial, Helvetica, sans-serif;
+.formulario {
+    font-size: 20px;
+    border: 1px solid grey;
     text-align: center;
+    padding: 20px;
 }
 
+input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+}
 
+input:hover {
+    background-color: yellowgreen;
+}
 
-.titulo-projeto{
-    font-family: 'Amatic SC', cursive;
-    font-size: 40px;
-} */
-
-
+.black-box>a {
+    color: white;
+    font-size: 20px;
+}
