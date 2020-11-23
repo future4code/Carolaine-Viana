@@ -50,6 +50,8 @@ div img {
     border-radius: 5px;
     font-size: 20px;
     color: white;
+    border: none;
+    margin-top: 100px;
 }
 
 .botao-amarelo:hover {
@@ -62,10 +64,10 @@ div img {
 }
 
 .icone {
-    height: 15px;
+    margin-top: 20px;
     background-color: white;
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     object-fit: cover;
 }
 
@@ -79,20 +81,23 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
-    padding: 20px;
+    padding: 50px;
 }
 
 #container-de-descricao>ol {
-    padding: 15px 0px;
+    padding: 15px 500px;
+    margin: auto;
+    width: 300px;
 }
 
 #container-para-comprar {
     background-color: #e7eb90;
+    padding: 50px;
 }
 
 #container-para-comprar>p {
     color: #c44f00;
-    padding: 100px 0;
+    padding: 100px 0px;
     font-size: 60px;
 }
 
@@ -111,6 +116,7 @@ div:last-child {
 table {
     width: 60%;
     margin: auto;
+    text-align: center;
 }
 
 td button {
@@ -119,6 +125,13 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
+    border: none;
+}
+
+td img {
+    width: 50px;
+    height: 50px;
+    background-color: white;
 }
 
 td button:hover {
@@ -132,14 +145,16 @@ td button:active {
 .container-do-search {
     margin-top: 20px;
     height: 100px;
+    margin: auto;
 }
 
-.teste {
+.input {
     border: 0;
-    border-bottom: 2px solid lightgray;
+    border-bottom: 1.5px solid black;
+    margin: auto;
 }
 
-#back-button {
+.back-button {
     background-color: white;
     width: 100px;
     height: 20px;
@@ -147,8 +162,10 @@ td button:active {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    margin-left: 650px;
+    margin-top: 200px;
 }
 
-#back-button:hover {
-    background-color: #635a3d
+.back-button:hover {
+    background-color: lightgray;
 }
