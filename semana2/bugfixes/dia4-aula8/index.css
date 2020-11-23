@@ -162,7 +162,11 @@ td button:active {
     border-radius: 5px;
     font-size: 10px;
     color: black;
-    margin-left: 650px;
+    text-align: center;
+}
+
+.botao-pai {
+    margin: auto;
     margin-top: 200px;
 }
 
