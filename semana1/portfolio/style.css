@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin:wght@500&family=Caveat&family=Comfortaa:wght@700&family=Francois+One&family=Goldman&family=Lato:wght@900&family=Noto+Sans+JP&family=Orbitron&family=Raleway:wght@100&display=swap');
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+    background-image: url(./img/5.jpg);
+    background-repeat: repeat;
+    font-family: 'Cabin', sans-serif;
+}
+
+.menu {
+    background-color: white;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.menu>span:hover {
+    margin-left: 40px;
+    background-color: lightgray;
+}
+
+a,
+span {
+    text-decoration: none;
+    color: black;
+}
+
+.apre {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: greenyellow;
+}
+
+.perfil {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.black-box>span {
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(172, 165, 165, 0.767);
+}
+
+.perfil {
+    width: 50%;
+    padding: 10px;
+    color: greenyellow;
+}
+
+.perfil>h2 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.dados-pessoais {
+    width: 50%;
+    text-align: center;
+    color: greenyellow;
+}
+
+.dados-pessoais>h2 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.dados-pessoais>p {
+    color: white;
+    font-size: 20px;
+}
+
+.dados-pessoais>.black-box {
+    background-color: black;
+}
+
+h2 {
+    text-align: center;
+}
+
+.box2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.experiencia {
+    width: 50%;
+    background-color: black;
+    color: greenyellow;
+    font-family: 'Noto Sans JP', sans-serif;
+    border: 1px solid grey;
+    padding: 20px;
+}
+
+.experiencia>h2 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.experiencia>h3 {
+    color: greenyellow;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+p {
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    font-size: 20px;
+}
+
+.habilidades {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-left: 300px;
+    font-size: 20px;
+}
+
+.habilidades .black-box {
+    background-color: black;
+}
+
+.hab-titulo {
+    color: greenyellow;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.redes-sociais {
+    color: greenyellow;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    list-style: none;
+}
+
+
+/* pagina 2 = galeria de projetos */
+
+.box3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.galeria-titulo {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: yellowgreen;
+}
+
+img {
+    border: 1px solid greenyellow;
+    padding: 10px;
+    background-color: white;
+}
+
+.proj {
+    width: 50%;
+    object-fit: cover;
+    color: yellowgreen;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.proj>h2,
+h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: yellowgreen;
+}
+
+
+/* pagina 3 = formulario para contato */
+
+.titulo-form {
+    font-family: 'Orbitron', sans-serif;
+    color: yellowgreen;
+    text-align: center;
+}
+
+.formulario {
+    font-size: 20px;
+    border: 1px solid grey;
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+}
+
+input:hover {
+    background-color: yellowgreen;
+}
+
+.black-box>a {
+    color: white;
+    font-size: 20px;
+}
