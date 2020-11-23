@@ -57,6 +57,10 @@ div img {
 
 .icone {
     height: 15px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
 }
 
 
@@ -124,11 +128,9 @@ td button:active {
     height: 100px;
 }
 
-.icone {
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
+.teste {
+    border: 0;
+    border-bottom: 2px solid lightgray;
 }
 
 #back-button {
