@@ -1,0 +1,224 @@
+/* ex 01 */
+
+#garden {
+    display: grid;
+    grid-column-start: 3;
+}
+
+
+/* ex 02 */
+
+#garden {
+    display: grid;
+    grid-column-start: 5;
+}
+
+
+/* ex 03 */
+
+#garden {
+    display: grid;
+    grid-column-end: 4;
+}
+
+
+/* ex 04 */
+
+#garden {
+    display: grid;
+    grid-column-end: 2;
+}
+
+
+/* ex 05 */
+
+#garden {
+    display: grid;
+    grid-column-end: 5;
+}
+
+
+/* ex 06 */
+
+#garden {
+    display: grid;
+    grid-column-start: 4;
+}
+
+
+/* ex 07 */
+
+#garden {
+    display: grid;
+    grid-column-end: span 2;
+}
+
+
+/* ex 08 */
+
+#garden {
+    display: grid;
+    grid-column-end: span 5;
+}
+
+
+/* ex 09 */
+
+#garden {
+    display: grid;
+    grid-column-start: span 3;
+}
+
+
+/* ex 10 */
+
+#garden {
+    display: grid;
+    grid-column: 6/4;
+}
+
+
+/* ex 11 */
+
+#garden {
+    display: grid;
+    grid-column: 2/5;
+}
+
+
+/* ex 12 */
+
+#garden {
+    display: grid;
+    grid-row-start: 3;
+}
+
+
+/* ex 13 */
+
+#garden {
+    display: grid;
+    grid-row: 3/6;
+}
+
+
+/* ex 14 */
+
+#garden {
+    display: grid;
+    grid-column: 2;
+    grid-row: 5;
+}
+
+
+/* ex 15 */
+
+#garden {
+    display: grid;
+    grid-column: 6/2;
+    grid-row: 1/6;
+}
+
+
+/* ex 16 */
+
+#garden {
+    display: grid;
+    grid-area: 1/2/4/6;
+}
+
+
+/* ex 17 */
+
+#garden {
+    display: grid;
+    grid-area: 2/3/5/6;
+}
+
+
+/* ex 18 */
+
+#garden {
+    display: grid;
+    order: 4;
+}
+
+
+/* ex 19 */
+
+#garden {
+    display: grid;
+    order: -1;
+}
+
+
+/* ex 20 */
+
+#garden {
+    display: grid;
+    grid-template-columns: 50%;
+}
+
+
+/* ex 21 */
+
+#garden {
+    display: grid;
+    grid-template-columns: repeat(5, 12.5%);
+}
+
+
+/* ex 22 */
+
+#garden {
+    display: grid;
+    grid-template-columns: 100px 3em 40%;
+}
+
+
+/* ex 23 */
+
+#garden {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+
+/* ex 24 */
+
+#garden {
+    display: grid;
+    grid-template-columns: 50px repeat(3, 1fr) 50px;
+}
+
+
+/* ex 25 */
+
+#garden {
+    display: grid;
+    grid-template-columns: 75px 3fr 2fr;
+}
+
+
+/* ex 26 */
+
+#garden {
+    display: grid;
+    grid-template-rows: 50px 0 0 0 1fr;
+}
+
+
+/* ex 27 */
+
+#garden {
+    display: grid;
+    grid-template: 60% / 200px;
+}
+
+
+/* ex 28 */
+
+#garden {
+    display: grid;
+    grid-template: 1fr 50px / 1fr 4fr;
+}

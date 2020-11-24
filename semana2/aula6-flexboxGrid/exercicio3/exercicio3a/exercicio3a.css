@@ -1,0 +1,65 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+#top-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.green-background {
+    background-color: green;
+    width: 400px;
+    height: 50px;
+}
+
+.yellow-background {
+    background-color: yellow;
+    width: 100%;
+}
+
+.pink-background {
+    display: flex;
+    justify-content: center;
+    background-color: fuchsia;
+    height: 500px;
+    width: 100%;
+}
+
+#middle-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blue-background {
+    background-color: blue;
+    height: 200px;
+    width: 400px;
+}
+
+.red-background {
+    background-color: red;
+    height: 100px;
+    width: 400px;
+}
+
+.lightgreen-background {
+    background-color: lightgreen;
+    height: 100px;
+    width: 400px;
+}
+
+.purple-background {
+    background-color: purple;
+    height: 50px;
+}
