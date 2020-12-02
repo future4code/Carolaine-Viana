@@ -168,3 +168,184 @@ if(genero === "Fantasia" && ingresso <=15){
 }else{
     console.log("Escolha outro filme!")
 }
+
+////EXERCÍCIO 7 && DESAFIO 02
+console.log("---Dados da compra----")
+nomeCliente = prompt("Digite seu nome:")
+console.log("Nome do cliente:", nomeCliente)
+tipojogo = prompt("Nacional ou Internacional?")
+console.log("Tipo de jogo:", tipojogo)
+etapajogo = prompt("Etapa de jogo: SF - Semifinais, DT - Decisao do 3 lugar, FI - Final")
+categoria = Number(prompt("Digite a categoria: [1] [2] [3] [4]"))
+console.log("Categoria:", categoria)
+quantidade = prompt("Quantidade de ingressos")
+console.log("---Valores---")
+
+
+switch(etapajogo){
+    case 'SF':
+        if(categoria===1 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(1320)
+            console.log("Valor do ingresso:", valor)
+            let total = quantidade * valor
+            console.log("Valor total:", total)
+        }else if(categoria===1 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            valor = Number(1320/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+        else if(categoria===2 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(880)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }else if(categoria===2 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            valor = Number(880/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+        else if(categoria===3 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(550)
+            console.log("Valor do ingresso:", valor)
+            let total = quantidade * valor
+            console.log("Valor total:", total)
+        }else if(categoria===3 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(550/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+        else if(categoria==4 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(220)
+            console.log("Valor do ingresso:", valor)
+            let total = quantidade * valor
+            console.log("Valor total:", total)
+        }
+        else if(categoria==4 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(220/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+        break
+    case 'DT':
+        if(categoria===1 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(1660)
+            console.log("Valor do ingresso:", valor)
+            let total = quantidade * valor
+            console.log("Valor total:", total)
+        }else if(categoria===1 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(1660/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+        else if(categoria===2 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(440)
+            console.log("Valor do ingresso:", valor)
+            let total = quantidade * valor
+            console.log("Valor total:", total)
+        }
+        else if(categoria===2 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(440/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+        else if(categoria===3 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(330)
+            console.log("Valor do ingresso:", valor)
+            let total = quantidade * valor
+            console.log("Valor total:", total)
+        }else if(categoria===3 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(330/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+        else if(categoria==4 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(170)
+            console.log("Valor do ingresso:", valor)
+            let total = quantidade * valor
+            console.log("Valor total:", total)
+        }else if(categoria==4 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(170/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+       break;
+    case 'FI':
+        if(categoria===1 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(1980)
+            console.log("Valor do ingresso:", valor)
+            let total = quantidade * valor
+            console.log("Valor total:", total)
+        }else if(categoria===1 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(1980/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+        else if(categoria===2 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(1320)
+            console.log("Valor do ingresso:", valor)
+            let total = quantidade * valor
+            console.log("Valor total:", total)
+        }else if(categoria===2 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(1320/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+        else if(categoria===3 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(880)
+            console.log("Valor do ingresso:", valor)
+            let total = quantidade * valor
+            console.log("Valor total:", total)
+        } else if(categoria===3 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(880/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+        
+        else if(categoria==4 && tipojogo==='Nacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(330)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }else if(categoria==4 && tipojogo==='Internacional'){
+            console.log("Etapa do jogo", etapajogo)
+            let valor = Number(330/4.10)
+            console.log("Valor do ingresso:", valor)
+            let total = Math.round(quantidade * valor)
+            console.log("Valor total:", total)
+        }
+        break
+}
