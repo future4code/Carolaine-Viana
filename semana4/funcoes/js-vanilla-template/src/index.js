@@ -471,17 +471,17 @@
 
 //A) 
 
-let nome = prompt("Digite seu nome")
-let idade = Number(prompt("Digite sua idade"))
-let cidade = prompt("Digite sua cidade")
-let estudante = Boolean(prompt("É estudante?"))
+// let nome = prompt("Digite seu nome")
+// let idade = Number(prompt("Digite sua idade"))
+// let cidade = prompt("Digite sua cidade")
+// let estudante = Boolean(prompt("É estudante?"))
 
 
-function meusDados(v1, v2, v3, v4){
-    console.log(`meu nome é ${nome} tenho ${idade}, moro em ${cidade} e sou ${estudante}`)
-}
+// function meusDados(v1, v2, v3, v4){
+//     console.log(`meu nome é ${nome} tenho ${idade}, moro em ${cidade} e sou ${estudante}`)
+// }
 
-meusDados(nome, idade, cidade, estudante)
+// meusDados(nome, idade, cidade, estudante)
 
 
 //EXERCICIO 05
@@ -570,3 +570,78 @@ function manipulaPar(variosarrays){
     }
 }
 manipulaPar(array)
+
+
+// ***** DESAFIOS ******* //
+
+//EXERCICIO 01
+
+//1) 
+
+let arrowFunction = (auxilio) =>{
+    console.log(auxilio)
+}
+
+const result_arrow = arrowFunction(10)
+
+//2)
+
+let multiplicandoPar = (n1, n2) =>{
+    let soma = n1+n2
+    console.log("Resultado soma:", soma)
+}
+
+const mult_arrow = multiplicandoPar(2, 2)
+
+//EXERCICIO 2
+
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
+
+//A)
+
+function paresArrays(auxiliar){
+    for(index of auxiliar){
+        if(index%2===0){
+            console.log("Resultado:", index*index)
+        }
+    }
+}
+
+paresArrays(numeros)
+
+//B
+let maior = 0
+function maiorNumero(aux){
+    for(index of aux){
+        if(index > maior){
+            maior = index
+        }
+    }
+    console.log("Maior numero:", maior)
+}
+
+maiorNumero(numeros)
+
+//C
+let maiorindice = 0
+
+function maiorIndex(aux){
+    for(let i=0; i<aux.length; i++){
+        if(aux>maiorindice){
+            maiorindice = aux
+        }
+    }
+    console.log("Posicao", aux[6])
+}
+
+maiorIndex(numeros)
+
+
+//D
+
+function invertido(aux){
+   console.log(aux.reverse())
+}
+
+invertido(numeros)
+
