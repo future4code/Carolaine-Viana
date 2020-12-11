@@ -31,7 +31,7 @@
 
 // *** EXERCICIOS DE LOGICA DE PROGRAMACAO *** ///
 
-//1
+//EX 1
 // FOR EACH, MAP, FILTER.
 const dinheiroContaFamilia = [
     {nome: "Carolaine", tipoConta: "corrente", valor: 50000000},
@@ -47,7 +47,7 @@ dinheiroContaFamilia.forEach((nome) => {
 console.log(dinheiroContaFamilia)
 
 
-//2
+//EX 2
 
 //A) false
 //B) false
@@ -56,7 +56,7 @@ console.log(dinheiroContaFamilia)
 //E) true
 
 
-//3
+//EX 3
 
 // RESPOSTA:
 
@@ -66,7 +66,7 @@ console.log(dinheiroContaFamilia)
 //   console.log(i*2)
 // }
 
-//4
+//EX 4
 
 function triangulo(n1, n2, n3){
     if(n1 === n2 && n2 === n3){
@@ -81,7 +81,7 @@ function triangulo(n1, n2, n3){
 triangulo(1, 2, 5)
 
 
-//5
+//EX 5
 
 function maior(num1, num2){
     if(num1 > num2){
@@ -104,3 +104,30 @@ function maior(num1, num2){
 }
 
 maior(15, 30)
+
+//EX 6
+
+//1)
+
+// let array = [10, 20, 50, 88]
+maior = 0
+let menor = 999
+const teste = [
+    {array: [10, 20, 88]}
+]
+
+const segundoMaior = teste.map((teste, index, lista)=>{
+    console.log(teste.array[2])
+    if(teste.array > maior){
+        maior = teste.array
+        console.log(maior)
+    }
+})
+
+// 2)
+
+const mensagem = () => {
+    alert("HELLO LABENU!")
+}
+
+mensagem()
