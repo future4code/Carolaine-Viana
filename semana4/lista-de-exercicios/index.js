@@ -219,7 +219,7 @@ console.log(menoresIdade)
 
 //2
 
-//A)
+//A) Escreva uma função que **retorne** um array com as entradas multiplicadas por 2. Isto é `[2, 4, 6, 8, 10, 12]`.
 
 const array = [1, 2, 3, 4, 5, 6]
 
@@ -228,23 +228,74 @@ for(index in array){
 }
 
 //B Escreva uma função que **retorne** um array com as entradas multiplicadas por 3 e como strings. Isto é: `["3", "6", "9", "15", "18"]`
+// let calc = []
+// for(index in array){
+//     calc.push(index*3)
+//     console.log(calc)
 
-for(index in array){
-    console.log("Multiplicado por 3", index*3)
-}
+// }
+
 
 //C
 
-for(index in array){
-    if(index%2==0){
-        console.log('é par', index)
-    }else{
-        console.log('é impar', index)
-    }
-}
+// for(index in array){
+//     if(index%2==0){
+//         console.log('é par', index)
+//     }else{
+//         console.log('é impar', index)
+//     }
+// }
 
 
 //3
+
+const pessoas3 = [
+	{ nome: "Paula", idade: 12, altura: 1.8},
+	{ nome: "João", idade: 20, altura: 1.3},
+	{ nome: "Pedro", idade: 15, altura: 1.9},
+	{ nome: "Luciano", idade: 22, altura: 1.8},
+	{ nome: "Artur", idade: 10, altura: 1.2},
+	{ nome: "Soter", idade: 70, altura: 1.9}
+]
+
+
+// A) Escreva uma **função** que **receba** este array e **devolva** outro array somente com as pessoas que **tem permissão de entrar** no brinquedo
+
+let novoarray = []
+let novoarray2 = []
+
+const podeEntrar = pessoas3.filter((pode, index, array) =>{
+    if(pode.altura >= 1.5 && pode.idade >= 14 && pode.idade <=60){
+        novoarray.push(pode.nome)
+    }else{
+        novoarray2.push(pode.nome)
+    }
+})
+
+console.log(novoarray)
+
+// B) Escreva uma **função** que **receba** este array e **devolva** outro array somente com as pessoas que **não podem entrar** no brinquedo.
+
+console.log(novoarray2)
+
+
+//4
+
+
+const consultas = [
+	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+]
+
+const aiaiai = consultas.filter((msg, index, list)=>{
+    if(msg.cancelada === 'true' && msg.genero === 'masculino'){
+        console.log(`Olá, Sr ${msg.nome}. Estamos enviando esta mensagem para lembrá-lo da sua consulta no dia ${msg.dataDaConsulta}. Por fvor, acuse o recebimento do e-mail.`)
+    }else if(msg.cancelada === 'false' && msg.genero === 'feminino'){
+        console.log(`Olá, Sra ${msg.nome}. Estamos enviando esta mensagem para lembrá-la da sua consulta no dia ${msg.dataDaConsulta}. Por fvor, acuse o recebimento do e-mail.`)
+    }
+})
 
 
 
