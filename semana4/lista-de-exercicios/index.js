@@ -54,3 +54,28 @@ console.log(dinheiroContaFamilia)
 //C) true
 //D) true
 //E) true
+
+
+//3
+
+// RESPOSTA:
+
+// const quantidadeDeNumerosPares
+// let i = 0
+// while(i <= quantidadeDeNumerosPares) {
+//   console.log(i*2)
+// }
+
+//4
+
+function triangulo(n1, n2, n3){
+    if(n1 === n2 && n2 === n3){
+        console.log("Equilátero")
+    }else if(n1 === n2 || n2 === n3){
+        console.log("Isósceles")
+    }else if(n1 !== n2 || n2 !== n3){
+        console.log("Escaleno")
+    }
+}
+
+triangulo(1, 2, 5)
