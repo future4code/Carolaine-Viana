@@ -182,3 +182,69 @@ function anonimizarPessoa(){
 }
 
 anonimizarPessoa()
+
+// ** Exercícios de Funções de array *** 
+
+//1
+
+const pesssoas2 = [
+	{ nome: "Pedro", idade: 20 },
+	{ nome: "João", idade: 10 },
+	{ nome: "Paula", idade: 12 },
+	{ nome: "Artur", idade: 89 } 
+]
+
+
+// a) Faça uma função que retorne um **novo array** só com os adultos (pessoas com idade igual ou superior a 20)
+
+
+const maioresIdade = pesssoas2.filter((maior, index, array) => {
+    if(maior.idade >=20){
+        return maior.nome
+    }
+})
+
+console.log(maioresIdade)
+
+//b) Faça uma função que retorne um **novo array** só com as crianças/adolescentes (pessoas com idade inferior a 20)
+
+const menoresIdade = pesssoas2.filter((menor, index, array) =>{
+    if(menor.idade<20){
+        return menor.nome
+    }
+})
+
+console.log(menoresIdade)
+
+
+//2
+
+//A)
+
+const array = [1, 2, 3, 4, 5, 6]
+
+for(index in array){
+    console.log("Multiplicado por 2", index*2)
+}
+
+//B Escreva uma função que **retorne** um array com as entradas multiplicadas por 3 e como strings. Isto é: `["3", "6", "9", "15", "18"]`
+
+for(index in array){
+    console.log("Multiplicado por 3", index*3)
+}
+
+//C
+
+for(index in array){
+    if(index%2==0){
+        console.log('é par', index)
+    }else{
+        console.log('é impar', index)
+    }
+}
+
+
+//3
+
+
+
