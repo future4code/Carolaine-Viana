@@ -29,6 +29,19 @@
 //no console log sera impresso os numeros da variavel num1 e num2.
 
 
+// *** EXERCICIOS DE LOGICA DE PROGRAMACAO *** ///
 
+//1
+// FOR EACH, MAP, FILTER.
+const dinheiroContaFamilia = [
+    {nome: "Carolaine", tipoConta: "corrente", valor: 50000000},
+    {nome: "MinhaMae", tipoConta: "poupanca", valor: 10000000000},
+    {nome: "MinhaIrma", tipoConta: "corrente", valor: 0}
+]
 
+dinheiroContaFamilia.forEach((nome) => {
+    nome.valor = 3803023293020423
+    console.log(nome.valor)
+})
 
+console.log(dinheiroContaFamilia)
