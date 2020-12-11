@@ -105,7 +105,7 @@ function maior(num1, num2){
 
 maior(15, 30)
 
-//EX 6
+//EX 6 ** Exercícios de Funções ***
 
 //1)
 
@@ -131,3 +131,35 @@ const mensagem = () => {
 }
 
 mensagem()
+
+
+//EX 7 ** Exercícios de Objetos ***
+
+//1
+//RESPOSTA: arrays sao listas, e objetos eu imagino como um cardapio ou menu. onde vc separa as coisas pelo contexto delas
+//objeto de pessoas: tem idade, nome, cpf, data de nascimento. 
+//objeto de comida tem: nome da comida, preco, do que é feito. etc.
+//arrays seriam a lista de coisas que ficaram dentro desse cardapio por ex: lasanha, hamburgue, batata frita etc.
+//e onde podemos utilizar esta no exemplo acima, em restaurante, ou para pegar dados pessoais de alguem.
+
+
+//2)
+
+function criaRetangulo(lado1, lado2){
+    let largura = (2 * (lado1 + lado2))
+    let area = (lado1*lado2)
+    console.log("largura:", largura)
+    console.log("altura", area)
+}
+criaRetangulo(2, 5)
+
+//3
+
+const filme = {
+    titulo: 'interstellar',
+    ano: 2014,
+    diretor: 'Christopher Nolan',
+    atores_atrizes: ['Matthew McConaughey', 'Anne Hathaway']
+}
+
+console.log(`Venha asssistir ao filme ${filme.titulo} de ${filme.ano}, dirigido pelo ${filme.diretor} e estrelado por: ${filme.atores_atrizes[0]}, ${filme.atores_atrizes[1]}`)
