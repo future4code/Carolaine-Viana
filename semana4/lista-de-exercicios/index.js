@@ -45,3 +45,12 @@ dinheiroContaFamilia.forEach((nome) => {
 })
 
 console.log(dinheiroContaFamilia)
+
+
+//2
+
+//A) false
+//B) false
+//C) true
+//D) true
+//E) true
