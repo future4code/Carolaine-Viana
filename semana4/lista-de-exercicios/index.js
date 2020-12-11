@@ -79,3 +79,28 @@ function triangulo(n1, n2, n3){
 }
 
 triangulo(1, 2, 5)
+
+
+//5
+
+function maior(num1, num2){
+    if(num1 > num2){
+        console.log("maior", num1)
+    }else{
+        console.log("maior", num2)
+    }
+
+    //divisao um pelo outro
+    if(num1 % num2 === 0){
+        console.log(`${num1} é divisivel por ${num2}`)
+        let sub = Math.abs(num2-num1)
+        console.log("a diferenca entre eles e ", sub)
+    }else{
+        console.log(`${num1} nao é divisivel por ${num2}`)
+        let sub = Math.abs(num2-num1)
+        console.log("a diferenca entre eles e ", sub)
+    }
+
+}
+
+maior(15, 30)
