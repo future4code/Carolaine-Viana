@@ -163,3 +163,22 @@ const filme = {
 }
 
 console.log(`Venha asssistir ao filme ${filme.titulo} de ${filme.ano}, dirigido pelo ${filme.diretor} e estrelado por: ${filme.atores_atrizes[0]}, ${filme.atores_atrizes[1]}`)
+
+//4)
+
+const pessoa = {
+    nome: 'Carolaine',
+    idade: 23,
+    email: 'carolsantos14@hotmail.com',
+    endereco: 'ABC 123'
+}
+
+function anonimizarPessoa(){
+    const novoObjeto = {
+        ...pessoa,
+        nome: 'Anonimo',
+    }
+    console.log(novoObjeto)
+}
+
+anonimizarPessoa()
