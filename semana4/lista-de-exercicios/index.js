@@ -64,7 +64,9 @@ console.log(dinheiroContaFamilia)
 // let i = 0
 // while(i <= quantidadeDeNumerosPares) {
 //   console.log(i*2)
+//   i++
 // }
+
 
 //EX 4
 
@@ -223,28 +225,33 @@ console.log(menoresIdade)
 
 const array = [1, 2, 3, 4, 5, 6]
 
-for(index in array){
-    console.log("Multiplicado por 2", index*2)
-}
+
+const calc1 = array.map((valor) =>{
+    const resultado = valor*2
+    return resultado.toString()
+})
+console.log(calc1)
 
 //B Escreva uma função que **retorne** um array com as entradas multiplicadas por 3 e como strings. Isto é: `["3", "6", "9", "15", "18"]`
-// let calc = []
-// for(index in array){
-//     calc.push(index*3)
-//     console.log(calc)
 
-// }
+const calc2 = array.map((valor) => {
+    const resultado = 3*valor
+    return resultado.toString()
+  })
 
+console.log(calc2)
 
 //C
 
-// for(index in array){
-//     if(index%2==0){
-//         console.log('é par', index)
-//     }else{
-//         console.log('é impar', index)
-//     }
-// }
+const testePares = array.map((valor) =>{
+    if(valor%2==0){
+        return `é par ${valor}`
+    }else{
+        return `é impar ${valor}`
+    }
+})
+
+console.log(testePares)
 
 
 //3
@@ -272,11 +279,11 @@ const podeEntrar = pessoas3.filter((pode, index, array) =>{
     }
 })
 
-console.log(novoarray)
+console.log("Pode entrar no brinquedo:", novoarray)
 
 // B) Escreva uma **função** que **receba** este array e **devolva** outro array somente com as pessoas que **não podem entrar** no brinquedo.
 
-console.log(novoarray2)
+console.log("Nao pode entrar no brinquedo:", novoarray2)
 
 
 //4
@@ -289,13 +296,37 @@ const consultas = [
 	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
 ]
 
-const aiaiai = consultas.filter((msg, index, list)=>{
-    if(msg.cancelada === 'true' && msg.genero === 'masculino'){
-        console.log(`Olá, Sr ${msg.nome}. Estamos enviando esta mensagem para lembrá-lo da sua consulta no dia ${msg.dataDaConsulta}. Por fvor, acuse o recebimento do e-mail.`)
+const aiaiai = consultas.map((msg)=>{
+    if(msg.cancelada === 'false' && msg.genero === 'masculino'){
+        return `Olá, Sr ${msg.nome}. Estamos enviando esta mensagem para lembrá-lo da sua consulta no dia ${msg.dataDaConsulta}. Por fvor, acuse o recebimento do e-mail.`
     }else if(msg.cancelada === 'false' && msg.genero === 'feminino'){
-        console.log(`Olá, Sra ${msg.nome}. Estamos enviando esta mensagem para lembrá-la da sua consulta no dia ${msg.dataDaConsulta}. Por fvor, acuse o recebimento do e-mail.`)
+        return `Olá, Sra ${msg.nome}. Estamos enviando esta mensagem para lembrá-la da sua consulta no dia ${msg.dataDaConsulta}. Por fvor, acuse o recebimento do e-mail.`
+    }else if(msg.cancelada=='true'){
+        return `infelizmente sua consulta marcada para o dia ${dataDaConsulta} foi cancelada. se quiser, pode entrar em contato para remarcar.`
     }
 })
 
+console.log(aiaiai)
+
+
+//5
+
+const contas = [
+    	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+    	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+    	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+    	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+    	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+    	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
+]
+   
+contas.forEach((resultado) => {
+    let total = 0
+    resultado.compras.forEach((valor) => {
+      total += valor
+    })
+    console.log("Total na conta:", resultado.saldoTotal - total)
+
+  })
 
 
