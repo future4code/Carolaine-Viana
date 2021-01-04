@@ -19,8 +19,11 @@ export default class Etapa2 extends React.Component{
     render(){
         return(
             <DivMain>
-            <h1>ETAPA 2 - INFORMACOES DO ENSINO SUPERIOR</h1>
-            <h2>5. Qual curso?</h2>
+            <h3>ETAPA 2 - INFORMAÇÕES DO ENSINO SUPERIOR</h3>
+            <p>5. Qual curso?</p>
+            <InputCurso/>
+            <p>6. Qual sua unidade de ensino?</p>
+            <InputCurso/>
             </DivMain>
         )
     }

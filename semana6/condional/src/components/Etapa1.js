@@ -27,29 +27,26 @@ const InputEscolaridade = styled.input`
 
 //*********chamar os setamentos ************// 
 
-export default class Conteudo extends React.Component {
+export default class Etapa1 extends React.Component {
 
     render() {
         return (
             <DivMain>
-                <h1>ETAPA 1 - DIGITE SEUS DADOS</h1>
-                <h2>1. Qual o seu nome?</h2>
+                <h3><strong>ETAPA 1 - DADOS GERAIS</strong></h3>
+                <p>1. Qual o seu nome?</p>
                 <InputNome type="email" />
-                <h2>2. Qual sua idade</h2>
+                <p>2. Qual sua idade</p>
                 <InputIdade type="number" />
-                <h2>3. Qual seu email?</h2>
+                <p>3. Qual seu email?</p>
                 <InputEmail />
-                <h2>4. Qual a sua escolaridade?</h2>
+                <p>4. Qual a sua escolaridade?</p>
                 <select>
-                    <option value="Ensino medio incompleto">Volvo</option>
-                    <option value="teste">teste</option>
-                    <option value="teste">teste</option>
-                    <option value="teste">teste</option>
+                    <option value="EMI">Ensino medio incompleto</option>
+                    <option value="EMC">Ensino medio completo</option>
+                    <option value="ESI">Ensino Superior Incompleto</option>
+                    <option value="ESC">Ensino Superior Completo</option>
                 </select>
-
-
             </DivMain>
         )
     }
-
 }
