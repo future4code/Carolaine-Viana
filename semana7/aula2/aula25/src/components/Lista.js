@@ -12,13 +12,12 @@ const DivResultado = styled.div`
 const DivCaixa = styled.div`
     width: 300px;
     height: 50px;
-    border: 1px solid black;
     margin: auto;
 `
 
 const DivDeletar = styled.button`
     width: 50px;
-    height: 10px;
+    height: 20px;
 
 `
 
@@ -35,6 +34,7 @@ class Lista extends React.Component{
         })
         return(
             <DivResultado>
+                <h1>Lista de usuários</h1>
                 {mapear}
             </DivResultado>
         )

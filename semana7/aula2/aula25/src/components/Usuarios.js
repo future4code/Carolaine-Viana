@@ -86,9 +86,9 @@ class Usuarios extends React.Component {
     render() {
         return (
             <DivCadastro>
-                <p>Nome</p>
+                <p><strong>Nome:</strong></p>
                 <InputNome onChange={this.pegarInputNome} value={this.state.valorInput}/>
-                <p>Email</p>
+                <p><strong>Email:</strong></p>
                 <InputEmail onChange={this.pegarInputEmail}/>
                 <p><BotaoSalvar onClick={this.criarUsuario}>Criar usuario</BotaoSalvar></p>
             </DivCadastro>

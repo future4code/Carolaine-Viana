@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const BotaoLista = styled.button`
     width: 200px;
-    height: 10px;
+    height: 20px;
 `
 
 class App extends React.Component {
@@ -70,7 +70,7 @@ class App extends React.Component {
       <div className="App">
         {this.state.ligar === false ? <Lista listaUsuario={this.state.users} excluirUsuario={this.excluirUsuario} /> : <Usuarios pegarTudo={this.pegarTudo} />}
 
-        <BotaoLista onClick={this.ligarLista}>Ir para página inicial</BotaoLista>
+        <BotaoLista onClick={this.ligarLista}>Avançar</BotaoLista>
       </div>
     )
   }
