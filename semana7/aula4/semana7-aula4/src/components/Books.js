@@ -7,6 +7,8 @@ const DivMain = styled.div`
     margin: auto;
     width: 500px;
     text-align: center;
+    color: white;
+    background-color: black;
 `
 
 export default class Tela1 extends React.Component {
@@ -21,13 +23,13 @@ export default class Tela1 extends React.Component {
     getBooks = () => {
         const request = axios.get("https://anapioficeandfire.com/api/books")
             .then((responde) => {
-                alert('sucesso')
+                alert('Carregado com sucesso')
                 this.setState({
                     todosDados: responde.data
                 })
                 console.log(responde.data)
             }).catch((error) => {
-                alert('nao foi gays')
+                alert('Nao foi carregado')
             })
     }
 
@@ -38,12 +40,12 @@ export default class Tela1 extends React.Component {
     render() {
         return (
             <DivMain>
-                <h1>LIVROS</h1>
+                <h1>BOOKS</h1>
                 {this.state.todosDados.map(p => {
                     return (
                         <div>
-                            <p>{p.name}</p>,
-                            <p>{p.author}</p>
+                            <p><strong>Titulo: </strong> {p.name}</p>
+                            <p><strong>Número de páginas: </strong>{p.numberOfPages}</p>
                         </div>
                     )
                 })}
