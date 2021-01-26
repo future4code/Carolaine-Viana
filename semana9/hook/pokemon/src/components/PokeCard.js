@@ -15,15 +15,14 @@ export default function PokeCard(props) {
   // }, [pokemon]);
 
   useEffect(() =>{
-    if(pokemon.name !== props.pokemon){
-      pegaPokemon(props)
-      console.log(pegaPokemon)
+    if(pokemon.name !== props.poke){
+      pegaPokemon(props.poke)
     }
   })
 
   const pegaPokemon = () => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+      .get(`https://pokeapi.co/api/v2/pokemon/${props.poke}`)
       .then(response => {
         // guarda as infos do pokemon no estado
         setpokemon(response.data);

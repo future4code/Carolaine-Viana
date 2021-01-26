@@ -10,7 +10,7 @@ export default function App(){
 
 
   useEffect(() =>{
-    if(pokelist === ""){
+    if(pokelist == ""){
       getAllPokemons()
     }
   })  
@@ -45,7 +45,7 @@ export default function App(){
             );
           })}
         </select>       
-        {pokename && <PokeCard pokemon={pokename} />}
+        {pokename && <PokeCard poke={pokename} />}
       </div>
     );
 }
