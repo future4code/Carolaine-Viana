@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import TelaUsuario from './TelaUsuario';
 
 const DivResultado = styled.div`
     width: 50%;
@@ -21,18 +22,30 @@ const DivDeletar = styled.button`
 
 `
 
-class Lista extends React.Component{  
-    render(){
-        console.log(this.props.listaUsuario)
-        const mapear = this.props.listaUsuario.map(p=>{
-            return(
+const AcessarUsuario = styled.button`
+    width: 50px;
+    height: 20px;
+`
+
+class Lista extends React.Component {
+
+    render() {
+        // console.log(this.state.guardarUsuario)
+        const mapear = this.props.listaUsuario.map(p => {
+            return (
+                <div>
                 <DivCaixa>
                     <strong>Usuário: </strong>{p.name}
-                    <DivDeletar onClick={()=>{this.props.excluirUsuario(p)}}>Deletar</DivDeletar>
+                    <AcessarUsuario onClick={() => { this.props.acessarUsuario(p.id)}}>Acessar</AcessarUsuario>
+                    {this.props.ligarTela && (<TelaUsuario nome={this.props.nome}/>)}
+                    {/* <TelaUsuario nome={this.props.nome}/> */}
+                    <DivDeletar onClick={() => { this.props.excluirUsuario(p)}}>Deletar</DivDeletar>
                 </DivCaixa>
+                {this.props.ligarTela && (<TelaUsuario nome={this.props.nome}/>)}
+                </div>
             )
         })
-        return(
+        return (
             <DivResultado>
                 <h1>Lista de usuários</h1>
                 {mapear}
