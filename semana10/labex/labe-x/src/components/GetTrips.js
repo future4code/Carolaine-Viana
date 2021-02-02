@@ -9,7 +9,7 @@ export default function GetTrips(){
 
   return (
     <div>
-      <h1>teste</h1>
+      <h1>Todas as viagens</h1>
       <p>{trips.name}</p>
     </div>
   );

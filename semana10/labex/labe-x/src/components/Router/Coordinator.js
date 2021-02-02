@@ -9,4 +9,11 @@ export const goToHomePage = (history) => {
   export const goToCreateTrip = (history) =>{
     history.push("/CreateTripPage");
   };
-  
+
+  export const goToGetTrips = (history) =>{
+    history.push("/GetTrips");
+  }
+
+  // export const goBack = (history) =>{
+  //   history.push("/GetTrips");
+  // }
