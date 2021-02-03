@@ -1,5 +1,5 @@
 export const goToHomePage = (history) => {
-    history.push("/HomePage");
+    history.push("/");
   };
   
   export const goToLoginPage = (history) => {
@@ -13,7 +13,3 @@ export const goToHomePage = (history) => {
   export const goToGetTrips = (history) =>{
     history.push("/GetTrips");
   }
-
-  // export const goBack = (history) =>{
-  //   history.push("/GetTrips");
-  // }

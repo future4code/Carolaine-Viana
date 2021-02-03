@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import HomePage from '../HomePage'
-import LoginPage from '../LoginPage';
-import CreateTripPage from '../CreateTripPage';
-import GetTrips from '../GetTrips';
+import HomePage from '../Pages/HomePage'
+import LoginPage from '../Pages/LoginPage';
+import CreateTripPage from '../Pages/CreateTripPage';
+import GetTrips from '../Pages/GetTrips';
 
 export default function Router(){
     return(

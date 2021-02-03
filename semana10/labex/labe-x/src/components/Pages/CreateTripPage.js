@@ -1,7 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import axios from 'axios';
-import {goToGetTrips} from "../components/Router/Coordinator";
+import {goToGetTrips} from "../Router/Coordinator";
 import {useHistory} from 'react-router-dom';
 
 export default function CreateTripPage(){
