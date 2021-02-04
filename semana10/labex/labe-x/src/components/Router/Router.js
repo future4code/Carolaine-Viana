@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HomePage from '../Pages/HomePage'
 import LoginPage from '../Pages/LoginPage';
 import CreateTripPage from '../Pages/CreateTripPage';
-import GetTrips from '../Pages/GetTrips';
+import ListTripsPage from '../Pages/ListTripsPage';
 
 export default function Router(){
     return(
@@ -12,14 +12,14 @@ export default function Router(){
                 <Route exact path="/">
                     <HomePage/>
                 </Route>
-                <Route exact path="/LoginPage">
+                <Route exact path="/login">
                     <LoginPage/>
                 </Route>
-                <Route exact path="/CreateTripPage">
+                <Route exact path="/trips/create">
                     <CreateTripPage/>
                 </Route>
-                <Route exact path="/GetTrips">
-                    <GetTrips/>
+                <Route exact path="/trips/list">
+                    <ListTripsPage/>
                 </Route>
             </Switch>
         </BrowserRouter>

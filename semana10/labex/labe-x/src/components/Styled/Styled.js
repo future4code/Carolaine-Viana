@@ -6,11 +6,7 @@ export const Container = styled.div`
 `
 
 export const Card = styled.div` 
-  /* position: relative; */
   width: 500px;
-  /* height: 700px; */
-  height: 50vh;
-  /* border-radius: 100%; */
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.1);
@@ -22,13 +18,18 @@ export const Card = styled.div`
   backdrop-filter: blur(5px);
   margin: auto;
   background-color: white;
-  max-width: 1200px;
   text-align: center;
   margin-top: 100px;
+  color: black;
 `
 
 export const ImagemBackground = styled.img`
     width: 100%;
     object-fit: cover;
+`
+
+export const Teste = styled.div`
+  background-color: red;
+  color: black;
 `
 

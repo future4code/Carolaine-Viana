@@ -3,13 +3,13 @@ export const goToHomePage = (history) => {
   };
   
   export const goToLoginPage = (history) => {
-    history.push("/LoginPage");
+    history.push("/login");
   };
   
   export const goToCreateTrip = (history) =>{
-    history.push("/CreateTripPage");
+    history.push("/trips/create");
   };
 
-  export const goToGetTrips = (history) =>{
-    history.push("/GetTrips");
+  export const goToListTripsPage = (history) =>{
+    history.push("/trips/list");
   }
