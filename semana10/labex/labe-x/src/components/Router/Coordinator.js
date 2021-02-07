@@ -11,5 +11,19 @@ export const goToHomePage = (history) => {
   };
 
   export const goToListTripsPage = (history) =>{
-    history.push("/trips/list");
+    history.push("/list");
   }
+
+  export const goToGetTripDetail = (history) =>{
+    history.push("/trips/detail")
+  }
+
+  export const goToApplyToTrip = (history) => {
+    history.push("/ApplyToTrip")
+  }
+
+  export const goToCandidates = (history) => {
+    history.pus("/Candidates")
+  }
+
+

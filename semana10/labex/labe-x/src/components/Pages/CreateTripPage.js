@@ -5,7 +5,9 @@ import {goToHomePage} from "../Router/Coordinator";
 import {useHistory} from 'react-router-dom';
 import useForm from '../Hooks/useForm';
 import Button from '@material-ui/core/Button';
-import {goToListTripsPage} from '../Router/Coordinator'
+import {goToListTripsPage} from '../Router/Coordinator';
+import {Card, subDiv} from '../Styled/Styled';
+import {url} from '../Bases/Url'
 
 export default function CreateTripPage(){
 
@@ -32,7 +34,7 @@ export default function CreateTripPage(){
     };
 
     axios
-    .post(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/carolaine-viana/trips/trips`, body,
+    .post(`${url}/trips`, body,
     {
         headers:{
              auth: token
@@ -40,10 +42,13 @@ export default function CreateTripPage(){
      })
     .then((response) =>{
         // goToListTripsPage(history, true);
-        clearFields();
+        console.log('criada')
+
+        // clearFields();
     })
     .catch((error) =>{
         alert(error.message)
+        console.log('deu erro')
     })
 };
 
@@ -52,11 +57,17 @@ export default function CreateTripPage(){
 //   setform({...form, [name]: value})
 // }
 
+const inputChange = (event) =>{
+  const { name, value } = event.target;
+
+  onChange(name, value)
+};
+
 
 const onClickButton = (event) =>{
   event.preventDefault()
   console.log(form)
-  clearFields()
+  // clearFields()
 }
 
 // useEffect(() =>{
@@ -68,19 +79,21 @@ const onClickButton = (event) =>{
 console.log(form)
  
   return(
-  <div>
+  <Card>
+        <subDiv>
+
     <h1>Criar viagem</h1>
       <form onSubmit={onClickButton}>
         <input
         name="name"
         value={form.name}
-        onChange={onChange}
+        onChange={inputChange}
         placeholder={"Nome da viagem"}
         required
         pattern={"[.\s\w]{5,}"}
         title={"o nome deve ter no minimo 5 letras"}
         /><br/>
-        <select value={form.planet} name="planet" onChange={onChange} placeholder="Digite o planeta" required>
+        <select value={form.planet} name="planet" onChange={inputChange}placeholder="Digite o planeta" required>
           <option value="">Planeta</option>
           <option value="mercurio">mercurio</option>
           <option value="venus">venus</option>
@@ -94,14 +107,14 @@ console.log(form)
         <input
           name="date"
           value={form.date}
-          onChange={onChange}
+          onChange={inputChange}
           placeholder={"Data da viagem"}
           required
         /><br/>
         <input
           name="description"
           value={form.description}
-          onChange={onChange}
+          onChange={inputChange}
           placeholder={"Descricao da viagem"}
           required
           pattern={"[.\s\w]{30,}"}
@@ -110,7 +123,7 @@ console.log(form)
           name="durationInDays"
           type="number"
           value={form.durationInDays}
-          onChange={onChange}
+          onChange={inputChange}
           placeholder={"Duracao em dias"}
           required
           min="50"
@@ -120,8 +133,11 @@ console.log(form)
       <br/>
       <br/>
       <Button variant="contained" color="secundary">Criar viagem</Button><br/><br/>
-      <Button variant="contained" color="secundary" onClick={()=>goToListTripsPage(history)}>Ir para página de viagens</Button>
-  </div>
+
+            </subDiv>
+
+      {/* <Button variant="contained" color="secundary" onClick={()=>goToListTripsPage(history)}>Ir para página de viagens</Button> */}
+  </Card>
   )
 
 
