@@ -63,6 +63,7 @@ export const InputDesign = styled.input`
   height: 30px;
   width: 200px;
   color: black;
+  margin-bottom: 10px;
 `
 
 

@@ -1,66 +1,94 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import {useHistory} from 'react-router-dom'
-// import { useProtectedPage } from "../Hooks/ProtectedPage";
-import Button from '@material-ui/core/Button';
-import Candidates from './Candidates';
-import {Card} from '../Styled/Styled';
-import {goToCreateTrip} from '../Router/Coordinator'
+// import React, { useState, useEffect} from 'react';
+// import axios from 'axios';
+// import { useHistory, useParams } from 'react-router-dom';
+// import {Card} from '../Styled/Styled';
 
-export default function GetTripDetail() {
-    const history = useHistory();
 
-    //guardar a viagens em um estado
-    const [trip, settrip] = useState([]) //vai ser um objeto vazio inicialmente
+// export default function TripDetail() {
+//     const history = useHistory();
+//     const pathParams = useParams();
+//     const [tripDetail, setTripDetail] = useState({});
+//     const [decideCandidate, setDecideCandidate] = useState(null)
 
-    useEffect(()=>{
-        const token = localStorage.getItem("token") //ver se ta logada
-        // if(!token){
-        //     history.push("/login")
-        // }
+//     const token = localStorage.getItem("token");
 
-        GetTripDetail()
-    }, [history]) //se nao mantem aqui executando
+//     const requestPut = (idCandidate, decision) =>{
+//         setDecideCandidate(decision)
 
-    
+//         const body = {
+//             aprove: decideCandidate
+//         }
 
-    const GetTripDetail = () =>{ //funcao que pega minhas viagens
-        axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/carolaine-viana/trips", {
-            headers: {
-                auth: localStorage.getItem("token")
-            }
-        }).then((res) =>{
-            settrip(res.data.trips)
-            console.log(res.data)
-        }).catch((error) =>{
-            console.log(error)
-        })
-    }
+//         axios
+//         .put(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/carolaine-viana-epps/trips/${pathParams.idTripDetail}/candidates/${idCandidate}/decide`, body,
+//         {
+//             headers:{
+//                 auth: token
+//             }
+//         })
+//         .then((response) =>{
+//             alert("Sucesso!")
+//         })
+//         .catch((error) =>{
+//             alert(error.message)
+//         })
+//     };
 
-    useEffect(()=>{
-        GetTripDetail()
-    }, [])
+//     const functionRequestGet = () =>{
+//         axios
+//             .get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/carolaine-viana-epps/trip/${pathParams.idTripDetail}`,
+//             {
+//                 headers:{
+//                     auth: token
+//                 }
+//             })
+//             .then((response) =>{
+//                 setTripDetail(response.data.trip)
+//                 console.log(tripDetail)
+//             })
+//             .catch((error) =>{
+//                 alert(error.message)
+//             })
+//     };
 
-  return (
-      <div>
-                <Button onClick={()=>goToCreateTrip(history)} variant="contained" color="secondary">Cadastrar nova viagem</Button><br/><br/>
+//     // useEffect(() =>{
+//     //     if(!token || !pathParams.idTripDetail) {
+//     //         // goToHomePage(history)
+//     //         alert('deu zika')
+//     //     }
+//     //     else{
+//     //        functionRequestGet() 
+//     //     }
+//     // }, []);
 
-    <Card>
-      <h1>Lista das viagens</h1>
 
-      {trip.map((t)=>{
-          return(
-              <div>
-                    <p><strong>Nome da viagem: </strong>{t.name}</p>
-                    <p><strong>Descricao da viagem: </strong>{t.description}</p>
-                    <p><strong>Data da viagem: </strong>{t.date}</p>
-                    <p><strong>Duracao da viagem: </strong>{t.durationInDays} dias</p>
-                    <Button variant="contained" color="primary">Lista de candidatos</Button>
-                    <hr/>
-                  </div>
-          )
-      })}
-    </Card>
-    </div>
-  )
-}
+//     return(
+//             <Card>
+                    
+//                     {/* <p>
+//                         Planeta: {tripDetail.planet}<br/>
+//                         Duração: {tripDetail.durationInDays} dias<br/>
+//                         Data: {tripDetail.date}
+//                     </p> */}
+//                     {tripDetail.candidates.map((candidate) =>{
+//                         return(
+//                             <div>
+//                                 <h4 key={candidate.name}>
+//                                     {candidate.name}
+//                                 </h4>
+//                                 <p key={candidate.id}>
+//                                     Idade: {candidate.age}<br/>
+//                                     Profissão: {candidate.profession}<br/>
+//                                     País: {candidate.country}<br/>
+//                                     {candidate.applicationText}
+//                                 </p>
+//                                 <div>
+//                                     {/* <ImgOk src={ok} onClick={()=>requestPut(candidate.id, true)}/> */}
+//                                     {/* <ImgCancel src={cancel} onClick={()=>requestPut(candidate.id, false)}/> */}
+//                                 </div>
+//                             </div>
+//                         );
+//                     })}
+//             </Card>  
+//     );
+// }

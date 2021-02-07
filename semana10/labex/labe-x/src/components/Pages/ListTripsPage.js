@@ -1,32 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {useHistory} from 'react-router-dom'
-// import { useProtectedPage } from "../Hooks/ProtectedPage";
 import {url} from '../Bases/Url';
-// import {Card} from '../Styled/Styled';
 import Button from '@material-ui/core/Button';
 import styled from 'styled-components'
 import {goToApplyToTrip} from '../Router/Coordinator';
 import img2 from '../../imagens/img2.png';
 import {Card} from '../Styled/Styled';
-import img4 from '../../imagens/img4.png'
-// import img5 from '../../imagens/img5.gif'
-// import img5 from '../../imagens/img5.gif'
+import img4 from '../../imagens/img4.png';
+import {subDiv} from '../Styled/Styled'
 
-const DivMain = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: yellow;
-  flex-wrap: wrap;
-`
 
-const Caixa = styled.div`
-  margin-left: 3vw;
-  width: 20vw;
-  border-radius: 100%;
-`
-
-const DivTeste = styled.img`
+const DivImagem = styled.img`
 margin-bottom: 100px;
 padding: 10px;
   width: 200px;
@@ -62,24 +47,26 @@ export default function ListTripsPage() {
     <div>
       <h1 style={{color: 'white'}}>Lista das viagens</h1>
     <Card>
-      <DivTeste src={img4}/>
+      <DivImagem src={img4}/>
       {trip.map((t)=>{
           return(
-              <Caixa>
+              <div>
                     <p key={t.name}><strong>Nome da viagem: </strong>{t.name}</p>
                     <p key={t.id}>
                         <p>Descricao: {t.description}</p>
                         <p>Data da viagem: {t.date}</p>
                         <p>Duracao da viagem: {t.durationInDays}</p>
+                        <hr/>
                     </p>
-                    {/* <p key={t.id}><strong>Descricao da viagem: </strong>{t.description}</p> */}
-                    {/* <p><strong>Data da viagem: </strong>{t.date}</p> */}
-                    {/* <p><strong>Duracao da viagem: </strong>{t.durationInDays} dias</p> */}
-                    <Button onClick={()=> goToApplyToTrip(history)} variant="contained" color="secondary">Inscreva-se</Button>
-                  </Caixa>
+                  </div>
           )
       })}
-              <DivTeste src={img2}/>
+      <subDiv>
+            <h1>Quero me candidatar a uma viagem</h1>
+             <Button onClick={()=>goToApplyToTrip(history)} variant="contained" color="secondary">Candidtar</Button>
+      </subDiv>
+             
+              <DivImagem src={img2}/>
 
     </Card>
     </div>

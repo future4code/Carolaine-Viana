@@ -4,7 +4,8 @@ import {useHistory, useParams} from 'react-router-dom';
 import useForm from '../Hooks/useForm';
 import {url} from '../Bases/Url';
 import Button from '@material-ui/core/Button';
-import {Card} from '../Styled/Styled'
+import {Card, InputDesign} from '../Styled/Styled';
+
 
 
 export default function ApplyToTrip () {
@@ -13,7 +14,20 @@ export default function ApplyToTrip () {
     const [form, onChange, clear] = useForm({name: "", age: "", applicationText: "", profession: "", country: ""})
     const pathParams = useParams()
     const [countries, setCountries] = useState([])
+    const [trips, setTrips] = useState([])
+    const [idTrip, setIdTrip] = useState()
 
+    const onChangeTrips = (e) => {
+        setIdTrip(e.target.value)
+      }
+
+      useEffect(() => {
+        getTrips()
+        requestCountry()
+      }, [])
+
+
+      //pegar os paises
     const requestCountry = () =>{
         axios
         .get("https://restcountries.eu/rest/v2/all")
@@ -25,41 +39,39 @@ export default function ApplyToTrip () {
         })
     };
 
-    const requestTrip = () =>{
-        const body = {
-            name: form.name,
-            age: form.age,
-            applicationText: form.applicationText,
-            profession: form.profession,
-            country: form.country
-        }
 
-        axios.post(`${url}/trips/${pathParams}/apply`, body)
-        .then((respondeu)=>{
-            console.log('inscricacao realizada com sucesso')
-            console.log(respondeu.data)
+    //post para se inscrever
+    const requestTrip = (event) => {
+        event.preventDefault()
+        axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/carolaine-viana-epps/trips/${idTrip}/apply`, form)
+          .then((res) => {
+            alert('Inscrição realizada com sucesso')
+            clear()
+          })
+          .catch((error) => {
+            alert('Não foi possível criar inscrição')
+          })
+      }
 
-        }).catch((error)=>{
-            console.log('deu erro ao se inscrever')
-        })
-    }
+      //get pegar as viagens
 
+      const getTrips = () => {
+        axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/carolaine-viana-epps/trips')
+          .then((res) => {
+            setTrips(res.data.trips)
+            console.log(res.data)
+          })
+          .catch((error) => {
+            alert('Não foi possível pegar as viagens.')
+          })
+      }
 
-    const clickSubmition = (event) =>{
-        event.preventDefault();
-    }
-
-    useEffect(()=>{
-        requestTrip()
-        requestCountry()
-        console.log(pathParams)
-    }, [])
-
+    
 return(
     <Card>
         <h1>Se inscrever para uma viagem</h1>
-        <form onSubmit={clickSubmition}>
-        <input
+        <form onSubmit={requestTrip}>
+        <InputDesign
         type="text"
         name="name"
         value={form.name}
@@ -70,7 +82,7 @@ return(
         placeholder="seu nome"
         /><br/>
 
-        <input
+        <InputDesign
             type="number"
             name= "age"
             value={form.age}
@@ -80,7 +92,7 @@ return(
             placeholder="sua idade"
         /><br/>
 
-        <input
+        <InputDesign
             type="text"
             name="applicationText"
             value={form.applicationText}
@@ -92,7 +104,7 @@ return(
             placeholder="porque voce deve ir"
         /><br/>
 
-        <input
+        <InputDesign
             type="text"
             name="profession"
             value={form.profession}
@@ -103,15 +115,6 @@ return(
             placeholder="sua profissao"
         /><br/>
 
-        {/* <input
-            type="text"
-            name="country"
-            value={form.country}
-            onChange={onChange}
-            placeholder="seu pais"
-            required
-        /> */}
-
             <select name="country" value={form.country} onChange={onChange} placeholder="seu pais" required>
                 <option value="">Pais</option>
                 {countries.map((p)=>{
@@ -119,9 +122,23 @@ return(
                         <option id={p.name} value={p.name}>{p.name}</option>
                     )
                 })}
-            </select><br/><br/>
+            </select>
 
-            <Button variant="contained" color="primary">Inscreva-se</Button><br/><br/>
+            <select
+              name='trips'
+              onChange={onChangeTrips}
+              value={idTrip}
+              required
+            >
+              <option selected disabled>Viagens</option>
+              {trips && <>{trips.map((trip) => {
+                return (
+                  <option value={trip.id}>{trip.name}</option>
+                )
+              })}</>}
+            </select>
+
+            <Button type="submit" variant="contained" color="primary">Inscreva-se</Button><br/><br/>
         </form>
     </Card>
 
