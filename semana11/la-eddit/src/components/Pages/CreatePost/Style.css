@@ -1,0 +1,28 @@
+img{
+    border: none;
+}
+
+.icones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.row-flex-spaces{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: #CAD6BB; */
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardMedia{
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+}

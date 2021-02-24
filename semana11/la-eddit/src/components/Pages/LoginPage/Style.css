@@ -1,0 +1,29 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.image{
+    background-image: url("https://picsum.photos/768");
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+.card-body{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.inputDesign {
+    width: 200px;
+    margin: auto;
+}
+
+.btn-success{
+    margin-bottom: 100;
+}
+
