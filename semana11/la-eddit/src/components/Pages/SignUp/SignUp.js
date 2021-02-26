@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import SignUpForm from "./SignUpForm";
 import useUnProtectedPage from '../../Hooks/useUnProtectedPage'
+import CreatePost from '../CreatePost/CreatePost';
 
 const SignUp = () => {
   useUnProtectedPage()

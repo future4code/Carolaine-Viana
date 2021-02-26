@@ -1,28 +1,100 @@
-img{
-    border: none;
+.main {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  line-height: 2rem;
+  /* background: var(--title);
+    color: var(--white); */
+  /* background-image: url(../../../img/bkp.jpg); */
+  /* color: white; */
 }
 
-.icones{
+/* .teste{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+} */
+
+.card {
+  width: 500px;
+  /* box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); */
+  border-radius: 15px;
+  /* background: rgba(255, 255, 255, 0.1); */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.5); */
+  /* border-left: 1px solid rgba(255, 255, 255, 0.5); */
+  backdrop-filter: blur(5px);
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+  /* background-color: #080C23; */
+  border: 1px solid lightgrey;
 }
 
+.main h1 {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.4;
+}
 
-.row-flex-spaces{
-    display: flex;
+.main h2 {
+  margin-bottom: 20px;
+}
+
+h1, h2{
+    margin: auto;
+    text-align: center;
     justify-content: center;
-    flex-direction: column;
-    /* background-color: #CAD6BB; */
+    line-height: 1.4;
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
+.comment {
+  margin: auto;
+  width: 45vw;
 }
 
-.cardMedia{
-    border: 1px solid black;
-    width: 500px;
-    height: 500px;
+:root {
+  --purpel: #160b20;
+  /* --white: #FFF;
+    --background: #F2F3F5;
+    --gray-line: #DCDDE0;
+    --text: #555555;
+    --text-highlight: #B3B9FF;
+    --title: #2E384D;
+    --red: #E83F5B;
+    --green: #4CD62B;
+    --blue: #5965E0;
+    --blue-dark: #4953B8;
+    --blue-twitter: #2AA9E0; */
+}
+
+img {
+  border: none;
+}
+
+.icones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.row-flex-spaces {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: #CAD6BB; */
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardMedia {
+  margin: auto;
+  flex: 1;
+  width: 45vw;
 }

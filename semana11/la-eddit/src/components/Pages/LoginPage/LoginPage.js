@@ -2,30 +2,28 @@ import React, { useEffect, useState } from "react";
 import Styled from "./Style.css";
 import { goToCreate, goToSignUp } from "../../Router/Coordinator";
 import { useHistory } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 // import goToFeed from '../../components/Router/Coordinator';
-import useForm from '../../Hooks/useForm';
-import LoginForm from './LoginForm';
-
+import useForm from "../../Hooks/useForm";
+import LoginForm from "./LoginForm";
 
 const LoginPage = () => {
-
-  const history = useHistory()
+  const history = useHistory();
   // const [email, setemail] = useState('')
-  const [password, setpassword] = useState('')
-  let token = localStorage.getItem("token")
-  const [form, onChange, clear] = useForm({email: "", password: ""})
-  
+  const [password, setpassword] = useState("");
+  let token = localStorage.getItem("token");
+  const [form, onChange, clear] = useForm({ email: "", password: "" });
+
   // const handleEmail = (event) =>{
   //   setemail(event.target.value)
   //   console.log(email)
   // }
-  
+
   // const handlePassword = (event) =>{
   //   setpassword(event.target.value)
   //   console.log(password)
   // }
-  
+
   // const loginPage = () => {
   //   const body = {
   //     email: form.email,
@@ -41,35 +39,25 @@ const LoginPage = () => {
   //     console.log(error)
   //   })
   // }
-  
- 
 
-// if(token==!null){
-//     <FeedPage/>
-// }
+  // if(token==!null){
+  //     <FeedPage/>
+  // }
 
-// useEffect(() =>{
-//   if(token){
-//     goToFeed(history)
-//   }
-// }, [history, token])
-  
+  // useEffect(() =>{
+  //   if(token){
+  //     goToFeed(history)
+  //   }
+  // }, [history, token])
+
   return (
     <>
-          <h1>Login Page</h1>
-
-          <LoginForm/>
-
-      {/* <button
-        type={ "submit"}
-        fullwidth
-        variant={"text"}
-        class="btn-success"
-        >Login</button> */}
-
-        {/* <button class="btn-success" onClick={clickSubmittion}>Login</button> */}
-        <p className="card-body">Nao possui conta? <u>cadastre-se</u></p>
+      <div className="main">
+        <h1>Login Page</h1>
+        <LoginForm />
+        <p>Nao possui conta? <u>cadastre-se</u></p>
         <button onClick={() => goToCreate(history)} className="card-body">Cadastro</button>
+      </div>
     </>
   );
 };
