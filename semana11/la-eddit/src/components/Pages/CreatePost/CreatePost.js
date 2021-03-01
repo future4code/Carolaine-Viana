@@ -16,40 +16,82 @@ const CreatePost = (props) => {
   const [comments, setComments] = useState([]);
   const [postDetail, setPostDetail] = useState({});
   let user = localStorage.getItem("user");
+  const [savePosts, setSavePosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const params = useParams();
+
 
   // const dataPosts = useRequestData([], "https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts");
 
-  const createPost = () => {
-    const headers = {
-      headers: {
-        Authorization: token,
-      },
-    };
-    axios
-      .post(
-        `https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts`,
-        form,
-        headers
-      )
-      .then((response) => {
-        alert("criado com sucesso");
-        console.log(response.data);
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
+  //pagina privada
+  useEffect(() => {
+    if (!localStorage.getItem("token") === null) {
+      // goToLoginPage(history);
+      history.push("/login");
+    }
+  }, [history]);
+
+  //carregou pega os posts
+  useEffect(() => {
+    getPosts()
+  }, [])
+  
+  const getPosts = () =>{
+  //provar pro back que to logada
+  const headers = {
+    headers: {
+      Authorization: token,
+    },
   };
+  setIsLoading(true); //ele fica carregando antes do axios bater
+  axios
+    .get(
+      "https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts",
+      headers
+    )
+    .then((res) => {
+      console.log("AQUIII", res.data);
+      //agora quero guardar esse array em um estado...
+      setSavePosts(res.data.posts);
+      setIsLoading(false); //carregou
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
 
   const submitForm = (event) => {
     event.preventDefault();
-    createPost();
+    // createPost();
     clear();
-  };
+  }
+  
+    // ********** FUNCOES DE VOTAR EM UM POST ********** //
+
+  const handleVote = (postId, direction) => {
+    const axiosConfig = {
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    };
+
+    const body = {
+      direction: direction //direction do parametro da funcao
+    }
+
+    axios.put(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${postId}/vote`, body, axiosConfig)
+    .then((res) => {
+      alert("votado com sucesso");
+      getPosts()
+    }).catch((err) => {
+      alert("nao foi possivel votar no comentário");
+      console.log(err);
+    })
+  }
 
   return (
     <div>
       <h1>Pagina de post</h1>
-      <h2>Feed</h2>
       <h2>Criar post</h2>
       <form onSubmit={submitForm}>
         <input
@@ -64,13 +106,19 @@ const CreatePost = (props) => {
           onChange={onChange}
           placeholder="o que quer escrever"
         />
-
-        <button onClick={createPost} type={"submit"} class="btn-success">
-          Criar
-        </button>
+        <button type={"submit"} class="btn-success">Postar</button>
       </form>
-
-      <PostCard />
+      
+      {/* MAP DOS POSTS */}
+      
+      {isLoading ? <progress /> : <p>pagina carregada</p>}
+      <div className="feedWrapper">
+      {savePosts.map((post) => {
+        return (
+          <PostCard key={post.id} post={post} handleVote={handleVote}/>
+        )
+      })}
+      </div>
     </div>
   );
 };
