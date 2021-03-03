@@ -1,0 +1,40 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+img{
+    margin: auto;
+    width: 500px;
+}
+
+.card-body{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.inputDesign {
+    width: 200px;
+    margin: auto;
+}
+
+.btn-success{
+    margin-bottom: 100;
+}
+
+.main{
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    line-height: 2rem;
+    /* background: var(--title);
+    color: var(--white); */
+}
+
+.main button{
+    width: 10vw;
+}
